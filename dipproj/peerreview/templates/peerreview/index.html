@@ -1,0 +1,64 @@
+{% extends 'peerreview/base.html' %}
+{% load static %}
+
+{% block metalinks %}
+
+<link rel="stylesheet" href="{% static 'peerreview/css/style.css' %}">
+<title>{{title}}</title>
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 col-sm-6 order-sm-first order-last">
+				<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+		  			<div class="carousel-inner">
+		    			<div class="carousel-item active">
+		      				<img src="{% static 'peerreview/images/image-1.png' %}" class="d-block w-100" alt="...">
+		    			</div>
+		    			<div class="carousel-item">
+		      				<img src="{% static 'peerreview/images/image-2.png' %}" class="d-block w-100" alt="...">
+		    			</div>
+		    			<div class="carousel-item">
+		      				<img src="{% static 'peerreview/images/image-3.png' %}" class="d-block w-100" alt="...">
+		    			</div>
+		  			</div>
+		  			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		    			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    			<span class="visually-hidden">Previous</span>
+		  			</button>
+		  			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		    			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    			<span class="visually-hidden">Next</span>
+		  			</button>
+				</div>
+			</div>
+			<div class="col align-self-center order-sm-last order-first">
+				<h1 class="text-h-1 ">Делись опытом и учись</h1>
+				<p class="text-p">Совместное мнение обладает большей точностью, чем индивидуальное мнение каждого из специалистов. Каждый может дать свою оценку, а также узнать что-то новое для себя.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+  		<div class="row">
+  			<div class="col-12 col-sm-4 icons">
+  				<img src="{% static 'peerreview/images/search.svg' %}" width="100" height="100">
+  				<h3>Помогай людям тем, что находишь их ошибки</h3>
+  			</div>
+
+  			<div class="col-12 col-sm-4 icons">
+  				<img src="{% static 'peerreview/images/people.svg' %}" width="100" height="100">
+  				<h3>Сервис подойдет для всех: школьникам, студентам и даже тем, кто работает</h3>
+  			</div>
+
+  			<div class="col-12 col-sm-4 icons">
+  				<img src="{% static 'peerreview/images/docs.svg' %}" width="100" height="100">
+  				<h3>Загружай текстовые документы для совместной оценки</h3>
+  			</div>
+  		</div>
+	</div>
+
+{% endblock %}

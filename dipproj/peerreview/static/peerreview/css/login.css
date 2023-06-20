@@ -1,0 +1,10 @@
+.backgroudFormLogin {
+    text-align:center;
+    background-color: #cc0000;
+}
+
+.form-error {
+    list-style: none;
+    padding: 0;
+    color: #cc0000;
+}

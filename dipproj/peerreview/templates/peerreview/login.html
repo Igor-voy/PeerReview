@@ -1,0 +1,29 @@
+{% extends 'peerreview/base.html' %}
+
+{% load static %}
+
+{% block metalinks %}
+
+<link rel="stylesheet" href="{% static 'peerreview/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'peerreview/css/login.css' %}">
+<title>{{title}}</title>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <form class="backgroudFormLogin" method="post">
+        {% csrf_token %}
+
+        <div class="form-error">{{ form.non_field_errors }}</div>
+
+        {% for f in form %}
+        <p><label class="form-control me-2" for="{{ f.id_for_label }}">{{f.label}}:</label>{{ f }}</p>
+        <div calss="form-error">{{ f.errors }}</div>
+        {% endfor %}
+
+        <button type="submit" class="btn btn-primary">Войти</button>
+    </form>
+</div>
+
+{% endblock %}
